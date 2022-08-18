@@ -2,11 +2,16 @@ package me.aleishawalters.payrollsystem.models;
 
 import lombok.Getter;
 import lombok.Setter;
+import net.bytebuddy.dynamic.loading.InjectionClassLoader;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 import java.util.Date;
-@Getter @Setter
+@Getter @Setter @Entity
 public class Company {
-
+    @Id @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
     private String companyCode;
     private String name;
