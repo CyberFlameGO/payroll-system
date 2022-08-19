@@ -1,4 +1,4 @@
-package me.aleishawalters.payrollsystem.controllers.requests;
+package me.aleishawalters.payrollsystem.companysvc.controllers.requests;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -9,7 +9,8 @@ import java.util.Date;
 
 @Getter @Setter
 @AllArgsConstructor @NoArgsConstructor
-public class CreateCompanyRequest {
+public class CreateCompanyRequest
+{
     private String companyCode;
     private String companyName;
     private Date startDate;

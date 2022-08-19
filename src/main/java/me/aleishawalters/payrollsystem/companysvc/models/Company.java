@@ -1,4 +1,4 @@
-package me.aleishawalters.payrollsystem.models;
+package me.aleishawalters.payrollsystem.companysvc.models;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -9,8 +9,8 @@ import javax.persistence.*;
 import java.util.Date;
 @Getter @Setter @Entity
 @AllArgsConstructor @NoArgsConstructor
-public class Company {
-
+public class Company
+{
     @Id @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
     private String companyCode;
@@ -18,5 +18,4 @@ public class Company {
     private String name;
     private Date startDate;
     private Date endDate;
-
 }

@@ -1,8 +1,8 @@
-package me.aleishawalters.payrollsystem.services;
+package me.aleishawalters.payrollsystem.companysvc;
 
-import me.aleishawalters.payrollsystem.exceptions.CompanyCodeDuplicateException;
-import me.aleishawalters.payrollsystem.models.Company;
-import me.aleishawalters.payrollsystem.repositories.CompanyRepository;
+import me.aleishawalters.payrollsystem.companysvc.exceptions.CompanyCodeDuplicateException;
+import me.aleishawalters.payrollsystem.companysvc.models.Company;
+import me.aleishawalters.payrollsystem.companysvc.repositories.CompanyRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
