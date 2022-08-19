@@ -1,0 +1,26 @@
+version: '3'
+
+services:
+  mysql:
+    image: mysql:latest
+    container_name: 'payroll_mysql'
+    restart: 'always'
+    ports:
+      - '3306:3306'
+    volumes:
+      - './data/db:/var/lib/mysql'
+    environment:
+      MYSQL_DATABASE: 'payroll_system_db'
+      MYSQL_USER: 'admin'
+      MYSQL_PASSWORD: 'p'
+      MYSQL_ROOT_PASSWORD: 'p'
+
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    container_name: 'payroll_system_phpmyadmin'
+    restart: 'always'
+    ports:
+      - '9090:80'
+    environment:
+      PMA_HOST: 'mysql'
+      PMA_PORT: '3306'
