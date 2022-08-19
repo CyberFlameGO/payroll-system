@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.server.ResponseStatusException;
 
 import java.util.Date;
+import java.util.List;
 
 @Controller @RestController
 public class CompanyController {
@@ -25,8 +26,11 @@ public class CompanyController {
     }
 
     @GetMapping ("/company")
-    public String getCompany(){
-        return "Heath smells";
+    public List<Company> getCompany()
+    {
+        List<Company> companies = this.companyService.getCompanies();
+
+        return companies;
     }
 
     @PostMapping("/company")
