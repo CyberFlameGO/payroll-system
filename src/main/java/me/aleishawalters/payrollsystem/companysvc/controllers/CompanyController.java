@@ -15,8 +15,8 @@ import org.springframework.web.server.ResponseStatusException;
 import java.util.List;
 
 @Controller @RestController
-public class CompanyController {
-
+public class CompanyController
+{
     private CompanyService companyService;
 
     public CompanyController(CompanyService companyService) {

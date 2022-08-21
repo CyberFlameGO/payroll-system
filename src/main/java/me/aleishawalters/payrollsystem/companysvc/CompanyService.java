@@ -13,7 +13,8 @@ public class CompanyService
 {
     private CompanyRepository companyRepository;
 
-    public CompanyService(CompanyRepository companyRepository) {
+    public CompanyService(CompanyRepository companyRepository)
+    {
         this.companyRepository = companyRepository;
     }
 

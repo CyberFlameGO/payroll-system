@@ -13,6 +13,7 @@ public class Company
 {
     @Id @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
+    @Column(unique = true)
     private String companyCode;
     @Column(length = 255)
     private String name;
